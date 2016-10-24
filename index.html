@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Yesteryear" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Esmeralda Murray</title>
+</head>
+
+<body>
+
+<!-- Header -->
+  <header>
+
+    <!-- Logo -->
+
+    <div id="logo"><a href="#start">Esmeralda Murray</a></div>
+
+    <!-- Navigation -->
+
+    <nav id="nav">
+    <ul>
+      <li><a href="#about" class="about">about</a></li>
+      <li><a href="#experience" class="experience">experience</a></li>
+      <li><a href="#etc" class="more">etc</a></li>
+      <li><a href="#contact" class="contact">contact</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+  <!-- Start -->
+<div class="block"></div>
+    <section id="start" class="page">
+
+      <h1>I'm <span class="element"></span></h1>
+      <h2>Get to know me.</h2>
+      <a href="#about"><img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png" style="width: 80px; height: 80px" class="arrow"></a>
+    </section>
+
+  <!-- About -->
+    <section id="about" class="page">I currently study Economics and International Relations at the <b>Maxwell School at Syracuse University</b>, pursuing concentrations in <b>econometrics, behavioral microeconomics and international political economy</b>. I aim to combine quantitative research methods with qualitative insights to better dissect and enhance the digital human experience. As such, I am deeply interested in human-computer interaction and technological applications within the broader social sciences.</section>
+
+  <!-- Experience -->
+
+    <section id="experience" class="page">My professional experiences have involved <b>mining and analyzing behavioral data</b> to exploit potential sources of employee retention and workplace productivity, <b>researching cascading behavior</b> in the context of social media networking, <b>developing predictive algorithms</b>, and <b>researching variables on a microeconomic level</b> to explain outliers discovered during quantitative analysis. I've had the pleasure of working and learning alongside extremely innovative people and groups at Ernst & Young, Bloomberg L.P. and Alley.</section>
+
+  <!-- Etc -->
+
+    <section id="etc" class="page">I play the saxophone, own every game in the Tales series and have watched every episode of the Office at least three times. I'm currently looking for professional and research opportunities concerning <b>data science, analysis and design research</b>.</section>
+
+  <!-- Contact -->
+    <section id="contact" class="page">To learn more, feel free to contact me—I don't bite!
+      <br>
+
+      <a style="display: inline-block; border: 0; text-decoration: none;" href="https://medium.com/@esmeraldamurray"><img style="width: 50px; height: 50px; margin: 7px;" src="http://esmeraldamurray.com/Medium.png" alt="Medium" /></a>
+
+      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://vsco.co/esmeraldamila?utm_source=user_grid&utm_medium=user_website&utm_campaign=link_to_grid"><img style="width: 50px; height: 50px; margin: 7px;" src="http://assets.vsco.co/assets/images/assets/Logo_black_24.png" alt="VSCO Logo" /></a>
+
+      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://github.com/ascodedbymila"><img style="width: 50px; height: 50px; margin: 7px;" src="http://esmeraldamurray.com/GitHub.png" alt="GitHub" /></a>
+
+      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://linkedin.com/in/esmeraldamurray"><img style="width: 50px; height: 50px; margin: 7px;" src="http://esmeraldamurray.com/LinkedIn.png" alt="LinkedIn" /></a>
+    </section>
+    
+</body>
+
+<script src="jquery.js" type="text/javascript"></script>
+<script src="typed.js" type="text/javascript"></script>
+<script>
+
+  // Typed effect //
+
+  $(function(){
+    $(".element").typed({
+      strings: ['a researcher.', 'a designer.', 'a budding scientist.', 'Esmeralda.'],
+      typeSpeed: 100
+    });
+  });
+
+  // Smooth scrolling //
+
+  $(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1000);
+  });
+
+  // Hidden header for #start //
+
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+
+    if (y > 600) {
+      $('header').fadeIn();
+    } else {
+      $('header').hide();
+    }
+  });
+
+</script>
+
+</html>
