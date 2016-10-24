@@ -1,0 +1,257 @@
+
+.block {
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 0 0 0;
+  background: #fff;
+  position: absolute;
+  height: 3em;
+}
+/* Header */
+
+header {
+  top: 0;
+  left: 0;
+  height: 3em;
+  margin: 0 0 0 0;
+  position: fixed;
+  width: 100%;
+  float: none;
+  background: rgba(300, 300, 300, 0.3);
+
+  font-family: 'Avenir Next', sans-serif;
+  text-transform: uppercase;
+}
+
+#logo {
+  position: absolute;
+  height: 3em;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1.5px;
+  top: 0;
+  left: 0;
+  margin: .9em .9em .9em;
+}
+
+
+#nav {
+  margin: .7em .9em .7em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style-type: none;
+}
+
+#nav ul {
+  margin: 0;
+}
+
+
+#nav ul li {
+  display: inline;
+  font-size: 14px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  font-weight: 250;
+  text-transform: lowercase;
+}
+
+/* Body */
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0 0 0 0;
+  display: table;
+  position: absolute;
+
+}
+
+#start {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 400;
+  line-height: 35px;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 35vh;
+  display: inline-block;
+  left: 25%;
+  width: 50%;
+}
+
+#about, #experience, #etc, #contact {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 400;
+  line-height: 35px;
+  font-size: 18px;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  padding-top: 35vh;
+  display: inline-block;
+  left: 25%;
+  width: 50%;
+}
+
+
+
+
+h2 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+}
+
+u {
+  border-bottom: 2px solid black;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+
+a:hover {
+  background: rgba(300, 300, 300, .2);
+}
+
+
+body {
+  margin: 0 0 0 0;
+}
+
+
+html {
+  background-image: -webkit-linear-gradient(top, #fff, #ff6e7f);
+  background-image: -o-linear-gradient(top, #bfe9ff, #ff6e7f);
+  background-image: -moz-linear-gradient(top, #bfe9ff, #ff6e7f);
+  background-image: linear-gradient(top, #bfe9ff, #ff6e7f);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+footer {
+  position: absolute;
+  width: 100%;
+  background: #FFE8F1;
+  font-family: 'Avenir', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  bottom: 0;
+  padding: 1em 1em 1em 1em;
+}
+
+.madeBy {
+  text-align: left;
+  padding: 0em 0em 1em 2em;
+  bottom: 0;
+}
+
+.social {
+  text-align: right;
+  bottom: 0;
+  margin-bottom: -35px;
+  margin-right: 30px;
+}
+
+/* Typed */
+
+.typed-cursor{
+  opacity: 0.5;
+  -webkit-animation: blink 2s infinite;
+  -moz-animation: blink 2s infinite;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@media screen and (max-width: 1020px) {
+  #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+  }
+}
+
+.arrow {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  padding-top: 100px;
+}
+
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes arrow {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+    
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+    
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); } }
+
