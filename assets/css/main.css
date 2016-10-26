@@ -138,6 +138,10 @@ a:hover {
   background: rgba(300, 300, 300, .2);
 }
 
+b {
+  font-weight: 400;
+}
+
 footer {
   position: absolute;
   width: 100%;
