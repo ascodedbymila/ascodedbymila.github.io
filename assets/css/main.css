@@ -452,3 +452,12 @@ Main components
   }
 }
 
+@font-face {
+    font-family: 'Circular Std';
+    src: url(assets/fonts/circularstd-book.ttf);
+}
+
+@font-face {
+    font-family: 'Circular Bold';
+    src: url(assets/fonts/circularstd-bold.ttf);
+}
