@@ -1,6 +1,3 @@
-/**
- * Created by esmeraldamurray on 10/21/16.
- */
 // The MIT License (MIT)
 
 // Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
@@ -398,8 +395,8 @@
   $.fn.typed = function(option) {
     return this.each(function() {
       var $this = $(this),
-        data = $this.data('typed'),
-        options = typeof option == 'object' && option;
+          data = $this.data('typed'),
+          options = typeof option == 'object' && option;
       if (data) { data.reset(); }
       $this.data('typed', (data = new Typed(this, options)));
       if (typeof option == 'string') data[option]();
@@ -412,15 +409,15 @@
     // typing speed
     typeSpeed: 500,
     // time before typing starts
-    startDelay: 200,
+    startDelay: 500,
     // backspacing speed
-    backSpeed: 50,
+    backSpeed: 10,
     // shuffle the strings
     shuffle: false,
     // time before backspacing
-    backDelay: 800,
+    backDelay: 1000,
     // loop
-    loop: false,
+    loop: true,
     // false = infinite
     loopCount: false,
     // show cursor

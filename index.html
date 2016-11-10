@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="assets/css/main.css">
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Yesteryear" rel="stylesheet">
+<script src="assets/js/modernizr.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Esmeralda Murray</title>
@@ -10,97 +9,110 @@
 
 <body>
 
-<!-- Header -->
-  <header>
+<div class="bar"></div>
+
+<header>
+
+    <a href="#start"><img class="logo" src="assets/img/logo.svg" height="25px" width="25px"></a>
 
     <!-- Logo -->
 
-    <div id="logo"><a href="#start">Esmeralda Murray</a></div>
 
     <!-- Navigation -->
 
-    <nav id="nav">
-    <ul>
-      <li><a href="#about" class="about">about</a></li>
-      <li><a href="#experience" class="experience">experience</a></li>
-      <li><a href="#etc" class="more">etc</a></li>
-      <li><a href="#contact" class="contact">contact</a></li>
-    </ul>
-  </nav>
-
+    <nav>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#research">research</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#etc">etc</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-  <!-- Start -->
-<div id="bar"></div>
-    <section id="start" class="page">
+<div class="container" id="start">
+    <p class="title">Hi! &#x1F44B<br><br>I'm Esmeralda and I<span class="element"></span></p>
+</div>
 
-      <h1>I'm <span class="element"></span></h1>
-      <h2>Get to know me.</h2>
-      <a href="#about"><img src="https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png" style="width: 80px; height: 80px" class="arrow"></a>
-    </section>
+<div class="container" id="about">
+    <p class="text">I'm a part-time taco pundit &#x1F32E and a full-time typography enthusiast &#x27B0 who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
+</div>
 
-  <!-- About -->
-    <section id="about" class="page">I currently study Economics and International Relations at the <b>Maxwell School at Syracuse University</b>, pursuing concentrations in <b>econometrics, behavioral microeconomics and international political economy</b>. I aim to combine quantitative research methods with qualitative insights to better dissect and enhance the digital human experience. As such, I am deeply interested in human-computer interaction and technological applications within the broader social sciences.</section>
+<div class="container" id="education">
+    <p class="text">I study Economics and International Relations at the Maxwell School at Syracuse University, pursuing concentrations in econometrics &#x1F4C8, behavioral economics &#x1F4AD and international political economy &#x1F30E.</p>
+</div>
 
-  <!-- Experience -->
+<div class="container" id="research">
+    <p class="text">My research concerns hyperbolic discounting in the context of mentally ill individuals and the effects of accessible technology on intertemporal choices &#x1F914.</p>
+</div>
 
-    <section id="experience" class="page">My professional experiences have involved <b>mining and analyzing behavioral data</b> to exploit potential sources of employee retention and workplace productivity, <b>researching cascading behavior</b> in the context of social media networking, <b>developing predictive algorithms</b>, and <b>researching variables on a microeconomic level</b> to explain outliers discovered during quantitative analysis. I've had the pleasure of working and learning alongside extremely innovative people and groups at Ernst & Young, Bloomberg L.P. and Alley.</section>
+<div class="container" id="experience">
+    <p class="text">I've worked and learned alongside some amazing people &#x1F46F at Ernst & Young, Bloomberg and Alley.</p>
+</div>
 
-  <!-- Etc -->
+<div class="container" id="etc">
+    <p class="text">Miles Edgeworth is my favorite lawyer &#x2696 and I play the saxophone &#x1F3B7.</p>
+</div>
 
-    <section id="etc" class="page">I play the saxophone, own every game in the Tales series and have watched every episode of the Office at least three times. I'm currently looking for professional and research opportunities concerning <b>data science, analysis and design research</b>.</section>
-
-  <!-- Contact -->
-    <section id="contact" class="page">To learn more, feel free to contact me—I don't bite!
-      <br><b>
-
-      <a style="display: inline-block; border: 0; text-decoration: none;" href="https://medium.com/@esmeraldamurray">Medium</a> •
-
-      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://vsco.co/esmeraldamila?utm_source=user_grid&utm_medium=user_website&utm_campaign=link_to_grid">Vsco</a> •
-
-      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://github.com/ascodedbymila">Github</a> •
-
-      <a style="display: inline-block; border: 0; text-decoration: none;" href="http://linkedin.com/in/esmeraldamurray">LinkedIn</a>
-    </b>
-    </section>
-    
+<div class="container" id="contact">
+    <p class="text">Want to learn more? <a href="mailto:emurray@syr.edu">Email me</a> or check me out on social media!</p>
+</div>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="assets/js/jquery.js" type="text/javascript"></script>
 <script src="assets/js/typed.js" type="text/javascript"></script>
 <script>
 
-  // Typed effect //
+    // Typed effect //
 
-  $(function(){
-    $(".element").typed({
-      strings: ['a researcher.', 'a designer.', 'a budding scientist.', 'Esmeralda.'],
-      typeSpeed: 100
+    $(function(){
+        $(".element").typed({
+            strings: ['\'m a data scientist-in-training with a penchant for visualization and design.', '\'m a junior at Syracuse University studying Quantitative Economics with a focus on behavioral analysis.', ' don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
+            typeSpeed: 20
+        });
     });
-  });
 
-  // Smooth scrolling //
+    // Smooth scrolling //
 
-  $(document).on('click', 'a', function(event){
-    event.preventDefault();
+    $(document).on('click', 'a', function(event){
+        event.preventDefault();
 
-    $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1000);
-  });
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 1000);
+    });
 
-  // Hidden header for #start //
+    // Hidden header for #start //
 
-  $(document).scroll(function() {
-    var y = $(this).scrollTop();
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
 
-    if (y > 600) {
-      $('header').fadeIn();
-    } else {
-      $('header').hide();
-    }
-  });
+        if (y > 600) {
+            $('header').fadeIn();
+        } else {
+            $('header').hide();
+        }
+    });
+
+
 
 </script>
+
+
+
 
 </html>
