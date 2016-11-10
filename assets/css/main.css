@@ -454,10 +454,10 @@ Main components
 
 @font-face {
     font-family: 'Circular Std';
-    src: url(assets/fonts/circularstd-book.ttf);
+    src: url('https://ascodedbymila.github.io/assets/fonts/circularstd-book.ttf');
 }
 
 @font-face {
     font-family: 'Circular Bold';
-    src: url(assets/fonts/circularstd-bold.ttf);
+    src: url('https://ascodedbymila.github.io/assets/fonts/circularstd-bold.ttf');
 }
