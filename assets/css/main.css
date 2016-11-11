@@ -92,7 +92,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 .bar {
@@ -145,6 +145,10 @@ a {
     padding-top: 15vw;
     font-weight: 300;
     position: static;
+}
+
+a.bodyLink {
+    background: rgba(150, 200, 200, 0.6);
 }
 
 #start {
