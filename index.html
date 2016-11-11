@@ -2,6 +2,7 @@
 <html lang="en">
 <link rel="stylesheet" href="assets/css/main.css">
 <script src="assets/js/modernizr.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>Esmeralda Murray</title>
@@ -13,6 +14,8 @@
 <body>
 
 <div class="bar"></div>
+
+<!-- Header -->
 
 <header>
 
@@ -35,7 +38,7 @@
 <!-- Body -->
 
 <div class="container" id="start">
-    <p class="title">Hi! &#x1F44B<br><br>I'm Esmeralda and I<span class="element"></span></p>
+    <p class="title">Hi! &#x1F44B &#x1F389 I'm Esmeralda &#x1F469 and <span class="element"></span></p>
 </div>
 
 <div class="container" id="about">
@@ -59,8 +62,40 @@
 </div>
 
 <div class="container" id="contact">
-    <p class="text">Want to learn more? <a href="mailto:emurray@syr.edu">Email me</a> or check me out on social media!</p>
+    <p class="text">Want to learn more?
+
+    <!-- Contact form -->
+
+        <form method="POST" action="http://formspree.io/emurray@syr.edu" class="cd-form floating-labels">
+            <fieldset>
+
+<div class="icon">
+    <label class="cd-label" for="cd-name">Your name</label>
+    <input class="user" type="text" name="cd-name" id="cd-name" required>
 </div>
+
+<div class="icon">
+    <label class="cd-label" for="cd-email">Your email</label>
+    <input class="email error" type="email" name="cd-email" id="cd-email" required>
+</div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-textarea">Your message</label>
+                    <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                </div>
+    <div>
+        <input type="submit" value="let's get in touch">
+    </div>
+</fieldset>
+</form>
+    </p>
+</div>
+
+<!-- Footer -->
+
+<footer>
+    <p class="footer">created + designed by esmeralda murray &#x1F192</p>
+</footer>
 </body>
 
 <!-- Javascript -->
@@ -73,7 +108,7 @@
 
     $(function(){
         $(".element").typed({
-            strings: ['\'m a data scientist-in-training with a penchant for visualization and design.', '\'m a junior at Syracuse University studying Quantitative Economics with a focus on behavioral analysis.', ' don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
+            strings: ['I\'m a New York native devoted to the 7 train.', 'I\'m probably watching the The Office right now.', 'my favorite Pokémon movie is Lucario and the Mystery of Mew.', 'I don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
             typeSpeed: 20
         });
     });
@@ -97,6 +132,26 @@
             $('header').fadeIn();
         } else {
             $('header').hide();
+        }
+    });
+
+    jQuery(document).ready(function($){
+        if( $('.floating-labels').length > 0 ) floatLabels();
+
+        function floatLabels() {
+            var inputFields = $('.floating-labels .cd-label').next();
+            inputFields.each(function(){
+                var singleInput = $(this);
+                //check if user is filling one of the form fields
+                checkVal(singleInput);
+                singleInput.on('change keyup', function(){
+                    checkVal(singleInput);
+                });
+            });
+        }
+
+        function checkVal(inputField) {
+            ( inputField.val() == '' ) ? inputField.prev('.cd-label').removeClass('float') : inputField.prev('.cd-label').addClass('float');
         }
     });
 
