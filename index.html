@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>Esmeralda Murray</title>
 
-    <link href="assets/img/favicon.ico" rel="icon">
+    <link rel="shortcut icon" href="assets/img/favicon.ico?">
 
 </head>
 
@@ -38,27 +38,27 @@
 <!-- Body -->
 
 <div class="container" id="start">
-    <p class="title">Hi! &#x1F44B &#x1F389 I'm Esmeralda &#x1F469 and <span class="element"></span></p>
+    <p class="title">Hi! &#x1F44B &#x1F389 I'm Esmeralda<br>and <span class="element"></span></p>
 </div>
 
 <div class="container" id="about">
-    <p class="text">I'm a part-time taco pundit &#x1F32E and a full-time typography enthusiast &#x27B0 who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
+    <p class="text">I'm a part-time taco pundit &#x1F32E and a full-time typography enthusiast who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
 </div>
 
 <div class="container" id="education">
-    <p class="text">I study Economics and International Relations at the Maxwell School at Syracuse University, pursuing concentrations in econometrics &#x1F4C8, behavioral economics &#x1F4AD and international political economy &#x1F30E.</p>
+    <p class="text">I study Economics and International Relations at the Maxwell School at Syracuse University, pursuing concentrations in econometrics, behavioral economics and international political economy.</p>
 </div>
 
 <div class="container" id="research">
-    <p class="text">My research concerns hyperbolic discounting in the context of mentally ill individuals and the effects of accessible technology on intertemporal choices &#x1F914.</p>
+    <p class="text">My research concerns hyperbolic discounting in the context of mentally ill individuals and the effects of accessible technology on intertemporal choices.</p>
 </div>
 
 <div class="container" id="experience">
-    <p class="text">I've worked and learned alongside some amazing people &#x1F46F at Ernst & Young, Bloomberg and Alley. Check out my <a href="assets/Esmeralda-Murray-public-resume.pdf">resume.</a></p>
+    <p class="text">I've worked and learned alongside some amazing people &#x1F46F at Ernst & Young, Bloomberg and Alley. Check out my <a href="https://www.dropbox.com/s/ecyu9k3ejt1vwb0/Esmeralda-Murray-public-resume.pdf">resume.</a></p>
 </div>
 
 <div class="container" id="etc">
-    <p class="text">Miles Edgeworth is my favorite lawyer &#x2696 and I play the saxophone &#x1F3B7.</p>
+    <p class="text">My favorite musical genre is classical and my favorite color is surprisingly not blue.</p>
 </div>
 
 <div class="container" id="contact">
@@ -108,19 +108,26 @@
 
     $(function(){
         $(".element").typed({
-            strings: ['I\'m a New York native devoted to the 7 train.', 'I\'m probably watching the The Office right now.', 'my favorite Pokémon movie is Lucario and the Mystery of Mew.', 'I don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
+            strings: ['I\'m a New York native devoted to the 7 train.', 'I\'m probably watching The Office right now.', 'my favorite Pokémon movie is Lucario and the Mystery of Mew.', 'I don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
             typeSpeed: 20
         });
     });
 
     // Smooth scrolling //
 
-    $(document).on('click', 'a', function(event){
-        event.preventDefault();
-
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 1000);
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
     });
 
     // Hidden header for #start //
