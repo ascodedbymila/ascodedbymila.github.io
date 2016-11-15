@@ -26,6 +26,7 @@ html {
 
 ul {
     margin: 0;
+    padding: 0;
     word-spacing: 20px;
 }
 
@@ -36,21 +37,19 @@ nav ul li {
     letter-spacing: 1px;
     font-weight: 500;
     text-transform: lowercase;
-    text-align: center;
     width: 100%;
-    vertical-align: middle;
 }
 
 nav ul li a {
     display: inline;
-    color: #D9F5F7;
+    color: #fff;
 }
 
 header {
     top: 0;
     left: 0;
     height: 4.7em;
-    margin: 0 0 0 0;
+    margin: 0 auto;
     position: fixed;
     width: 100%;
     background: rgba(130, 100, 140, 0.2);
@@ -64,9 +63,7 @@ header {
 
 nav {
     top: 0;
-    right: 0;
-    text-align: center;
-    margin: 0;
+    left: 0;
     list-style-type: none;
     display: inline;
     position: relative;
@@ -152,7 +149,8 @@ a.bodyLink {
 .arrow {
     top: 500px;
     position: absolute;
-    left: 45%;
+    left: 50%;
+    margin-left: -25px;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
