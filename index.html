@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="assets/css/main.css">
 <script src="assets/js/modernizr.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <title>Esmeralda Murray</title>
-
-    <meta property="og:title" content="Esmeralda Murray">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="http://esmeraldamurray.com/assets/img/backgroundPhoto.jpg"/>
-    <meta property="og:description" content="I'm an aspiring data scientist with a penchant for typography and a flair for computationally-derived insights. Probably eating tacos right now.">
-
+    <meta property="og:url" content="http://esmeraldamurray.com/"/>
+    <meta property="og:title" content="Esmeralda Murray"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="assets/img/og-image.svg"/>
+    <meta property="og:description" content="I'm an aspiring data scientist with a penchant for typography and a flair for computationally-derived insights. Probably eating tacos right now."/>
     <link rel="shortcut icon" href="assets/img/favicon.ico?">
-
 </head>
+
+<!-- Body -->
 
 <body>
 
+    <!-- Header -->
+
+    <div class="bar"></div>
+
+    <header>
+
+        <!-- Navigation -->
+
+        <a href="#start"><img src="assets/img/logo.svg" class="logo" height="35px" width="35px"></a>
+
+        <nav>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#research">research</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="shapes">
     <img class="small-circle" src="assets/img/smallcircle.svg">
@@ -32,33 +52,29 @@
     <img class="large-line" src="assets/img/largeline.svg">
 </div>
 
-
-
-<!-- Body -->
-
-<div class="content">
-    <div class="title"><h1 class="animated fadeInLeft">Esmeralda Murray</h1>
+<div class="container">
+    <div class="title" id="start"><h1 class="animated bounceInDown">Esmeralda Murray</h1>
     <h3><span class="element"></span></h3></div>
 </div>
 
-<div class="content" id="about">
+<div class="container" id="about">
     <p class="text">I'm a part-time taco pundit and a full-time typography enthusiast who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
 </div>
 
-<div class="content">
+<div class="container" id="education">
     <p class="text">I study Economics and International Relations at the Maxwell School at Syracuse University, pursuing concentrations in econometrics, behavioral economics and international political economy.</p>
 </div>
 
-<div class="content">
+<div class="container" id="research">
     <p class="text">My research concerns time-inconsistent instances of utility discounting in the context of help-seeking rates and the effects of accessible technology on intertemporal choices. I work through the NEXIS Lab at Syracuse's iSchool.</p>
 </div>
 
-<div class="content">
+<div class="container" id="experience">
     <p class="text">I've worked and learned alongside some amazing people at Ernst & Young, Bloomberg and Alley. I'll be joining BlackRock next year as a Summer Analyst in the Portfolio Analytics Group.</pp>
 </div>
 
 <div class="content" id="contact">
-    <p class="text">Want to learn more?
+    <p class="text-contact">Want to learn more?
 
         <!-- Contact form -->
 
@@ -114,7 +130,7 @@
 
     $(function(){
         $(".element").typed({
-            strings: ['is an aspiring data scientist', 'is probably watching the Office right now', 'has two first names', 'loves the Discover Weekly algorithm way too much', 'just discovered It\'s Always Sunny', 'wakes up to Tame Impala every morning'],
+            strings: ['is an aspiring data scientist', 'is probably watching the Office right now', 'loves the Discover Weekly algorithm way too much', 'just discovered It\'s Always Sunny', 'wakes up to Tame Impala every morning'],
             typeSpeed: 20
         });
     });
@@ -134,6 +150,50 @@
                 }
             }
         });
+    });
+
+    // Hidden header for #start //
+    $(document).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 600) {
+            $('header').fadeIn();
+        } else {
+            $('header').hide();
+        }
+    });
+
+    // nav effect
+
+    var sections = $('div')
+            , nav = $('nav')
+            , nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+
+        sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+                    bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('a').removeClass('active');
+                sections.removeClass('active');
+
+                $(this).addClass('active');
+                nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+            }
+        });
+    });
+
+    nav.find('a').on('click', function () {
+        var $el = $(this)
+                , id = $el.attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height
+        }, 500);
+
+        return false;
     });
 
 

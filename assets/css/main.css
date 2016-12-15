@@ -13,6 +13,68 @@
 
 /* Main */
 
+.bar {
+    width: 100%;
+    margin: 0;
+    height: 3em;
+    top: 0;
+    left: 0;
+    background: #FCFAF7;
+    position: relative;
+    z-index: 10001;
+}
+
+nav ul li {
+    display: inline;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: lowercase;
+    padding-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: inline;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+nav {
+    float: right;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    list-style-type: none;
+    display: inline;
+}
+
+header {
+    top: 0;
+    left: 0;
+    height: 3em;
+    margin: 0 0 0 0;
+    position: fixed;
+    width: 100vw;
+    background: #FCFAF7;
+    line-height: 1em;
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #99D875;
+}
+
+
+
+
+
+
+
+
 body, html {
     min-height: 100%;
     min-width: 100%;
@@ -25,7 +87,19 @@ body, html {
     font-size: 30px;
     width: 60%;
     margin: 0 auto;
-    padding-top: 15vw;
+    padding-top: 20vw;
+    font-weight: 500;
+    position: static;
+    letter-spacing: 1px;
+    font-family: 'Circular Std', sans-serif;
+    color: #30323A;
+}
+
+.text-contact {
+    font-size: 30px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 10vw;
     font-weight: 500;
     position: static;
     letter-spacing: 1px;
@@ -45,6 +119,7 @@ footer {
     width: 100%;
     position: inherit;
     background: #A277B2;
+    opacity: .8;
     padding: 0;
     margin: 0 auto;
     text-align: center;
@@ -56,13 +131,6 @@ footer {
 
 
 
-a {
-    text-decoration: none;
-    color: inherit;
-    background: yellow;
-    line-height: 20px;
-}
-
 h3 {
     font-family: 'Space Mono', sans-serif;
     color: #30323A;
@@ -71,10 +139,10 @@ h3 {
 }
 
 
-.content {
+.container {
     height: 100vh;
     width: 100vw;
-    position: relative;
+    position: static;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -312,11 +380,6 @@ h2 {
     line-height: 7vw;
 }
 
-p {
-
-    letter-spacing: 1px;
-
-}
 
 .shape {
     padding-top: 10px;
@@ -326,7 +389,7 @@ p {
 
 
 #contact {
-    padding-top: 20px !important;
+    padding-bottom: 20px !important;
 }
 
 
