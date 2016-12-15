@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/animate.css">
 <script src="assets/js/modernizr.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <head>
@@ -13,103 +14,102 @@
 
 <body>
 
-<div class="bar"></div>
 
-<!-- Header -->
+<div class="shapes">
+    <img class="small-circle" src="assets/img/smallcircle.svg">
+    <img class="large-circle" src="assets/img/largecircle.svg">
+    <img class="small-triangle" src="assets/img/smalltriangle.svg">
+    <img class="large-triangle" src="assets/img/largetriangle.svg">
+    <img class="small-square" src="assets/img/smallsquare.svg">
+    <img class="large-square" src="assets/img/largesquare.svg">
+    <img class="small-peak" src="assets/img/smallpeak.svg">
+    <img class="large-squiggle" src="assets/img/largesquiggle.svg">
+    <img class="large-line" src="assets/img/largeline.svg">
+</div>
 
-<header>
 
-    <!-- Navigation -->
-
-    <a href="#start"><img class="logo" src="assets/img/logo.svg" height="25px" width="25px"></a>
-
-    <nav>
-        <ul>
-            <li><a href="#about">about</a></li>
-            <li><a href="#education">education</a></li>
-            <li><a href="#research">research</a></li>
-            <li><a href="#experience">experience</a></li>
-            <li><a href="#etc">etc</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </nav>
-</header>
 
 <!-- Body -->
 
-<div class="container" id="start">
-    <p class="title">Hi! &#x1F44B &#x1F389 I'm Esmeralda<br>and <span class="element"></span></p>
-    <p class="arrow"><a href="#about"><img src="assets/img/arrow.svg" width="40px" height="40px"></a></p>
+<div class="content">
+    <div class="title"><h1 class="animated fadeInLeft">Esmeralda Murray</h1>
+    <h3><span class="element"></span></h3></div>
 </div>
 
-<div class="container" id="about">
-    <p class="text">I'm a part-time taco pundit &#x1F32E and a full-time typography enthusiast who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
+<div class="content" id="about">
+    <p class="text">I'm a part-time taco pundit and a full-time typography enthusiast who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
 </div>
 
-<div class="container" id="education">
+<div class="content">
     <p class="text">I study Economics and International Relations at the Maxwell School at Syracuse University, pursuing concentrations in econometrics, behavioral economics and international political economy.</p>
 </div>
 
-<div class="container" id="research">
-    <p class="text">My research concerns hyperbolic discounting in the context of mentally ill individuals and the effects of accessible technology on intertemporal choices.</p>
+<div class="content">
+    <p class="text">My research concerns time-inconsistent instances of utility discounting in the context of help-seeking rates and the effects of accessible technology on intertemporal choices. I work through the NEXIS Lab at Syracuse's iSchool.</p>
 </div>
 
-<div class="container" id="experience">
-    <p class="text">I've worked and learned alongside some amazing people &#x1F46F at Ernst & Young, Bloomberg and Alley. <a href="https://www.dropbox.com/s/ecyu9k3ejt1vwb0/Esmeralda-Murray-public-resume.pdf" class="bodyLink" target="_blank">Check out my resume</a>.</p>
+<div class="content">
+    <p class="text">I've worked and learned alongside some amazing people at Ernst & Young, Bloomberg and Alley. I'll be joining BlackRock next year as a Summer Analyst in the Portfolio Analytics Group.</pp>
 </div>
 
-<div class="container" id="etc">
-    <p class="text">My favorite musical genre is classical and my favorite color is surprisingly not blue.</p>
-</div>
-
-<div class="container" id="contact">
+<div class="content" id="contact">
     <p class="text">Want to learn more?
 
-    <!-- Contact form -->
+        <!-- Contact form -->
 
-        <form method="POST" action="http://formspree.io/emurray@syr.edu" class="cd-form floating-labels">
-            <fieldset>
+    <form method="POST" action="http://formspree.io/emurray@syr.edu" class="cd-form floating-labels">
+        <fieldset>
 
-<div class="icon">
-    <label class="cd-label" for="cd-name">Your name</label>
-    <input class="user" type="text" name="cd-name" id="cd-name" required>
-</div>
+            <div class="icon">
+                <label class="cd-label" for="cd-name">Your name</label>
+                <input class="user" type="text" name="cd-name" id="cd-name" required>
+            </div>
 
-<div class="icon">
-    <label class="cd-label" for="cd-email">Your email</label>
-    <input class="email error" type="email" name="cd-email" id="cd-email" required>
-</div>
+            <div class="icon">
+                <label class="cd-label" for="cd-email">Your email</label>
+                <input class="email error" type="email" name="cd-email" id="cd-email" required>
+            </div>
 
-                <div class="icon">
-                    <label class="cd-label" for="cd-textarea">Your message</label>
-                    <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
-                </div>
-    <div>
-        <input type="submit" value="let's get in touch!">
-    </div>
-</fieldset>
-</form>
+            <div class="icon">
+                <label class="cd-label" for="cd-textarea">Your message</label>
+                <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+            </div>
+            <div>
+                <input type="submit" value="let's get in touch!">
+            </div>
+        </fieldset>
+    </form>
     </p>
 </div>
 
 <!-- Footer -->
 
 <footer>
-    <p class="footer">created + designed by esmeralda murray &#x1F192</p>
+    <p class="footer">created + designed by esmeralda &#x1F192</p>
 </footer>
 </body>
 
+<script type="text/javascript" src="assets/js/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+
+</body>
+
 <!-- Javascript -->
+
 
 <script src="assets/js/jquery.js" type="text/javascript"></script>
 <script src="assets/js/typed.js" type="text/javascript"></script>
 <script>
 
+
+
     // Typed effect //
 
     $(function(){
         $(".element").typed({
-            strings: ['I\'m a New York native devoted to the 7 train.', 'I\'m probably watching The Office right now.', 'my favorite Pokémon movie is Lucario and the Mystery of Mew.', 'I don\'t like Oxford commas all that much.', ' hate speaking about myself in the third person.'],
+            strings: ['is an aspiring data scientist', 'is probably watching the Office right now', 'has two first names', 'loves the Discover Weekly algorithm way too much', 'just discovered It\'s Always Sunny', 'wakes up to Tame Impala every morning'],
             typeSpeed: 20
         });
     });
@@ -131,17 +131,6 @@
         });
     });
 
-    // Hidden header for #start //
-
-    $(document).scroll(function() {
-        var y = $(this).scrollTop();
-
-        if (y > 600) {
-            $('header').fadeIn();
-        } else {
-            $('header').hide();
-        }
-    });
 
     jQuery(document).ready(function($){
         if( $('.floating-labels').length > 0 ) floatLabels();

@@ -406,7 +406,7 @@
     // typing speed
     typeSpeed: 500,
     // time before typing starts
-    startDelay: 500,
+    startDelay: 1000,
     // backspacing speed
     backSpeed: 10,
     // shuffle the strings
@@ -420,7 +420,7 @@
     // show cursor
     showCursor: true,
     // character for cursor
-    cursorChar: "_",
+    cursorChar: "|",
     // attribute to type (null == text)
     attr: null,
     // either html or text
