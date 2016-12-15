@@ -2,7 +2,6 @@
 <html lang="en">
 <link rel="stylesheet" href="assets/css/animate.css">
 <link rel="stylesheet" href="assets/css/main.css">
-<script src="assets/js/modernizr.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
@@ -15,30 +14,23 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico?">
 </head>
 
-<!-- Body -->
-
 <body>
 
-    <!-- Header -->
+<div class="bar"></div>
 
-    <div class="bar"></div>
-
-    <header>
-
-        <!-- Navigation -->
-
+<header>
         <a href="#start"><img src="assets/img/logo.svg" class="logo" height="35px" width="35px"></a>
-
         <nav>
             <ul>
                 <li><a href="#about">about</a></li>
                 <li><a href="#education">education</a></li>
                 <li><a href="#research">research</a></li>
-                <li><a href="#experience">experience</a></li>
+                <li><a href="#experience">exp</a></li>
+                <li><a href="#etc">etc</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
-    </header>
+</header>
 
 <div class="shapes">
     <img class="small-circle" src="assets/img/smallcircle.svg">
@@ -59,7 +51,7 @@
 </div>
 
 <div class="container" id="about">
-    <p class="text">I'm a part-time taco pundit and a full-time typography enthusiast who wants to better explain behavioral phenomena and user experiences through data analysis.</p>
+    <p class="text">I'm a part-time taco pundit and a full-time typography enthusiast who wishes to better explain behavioral phenomena and user experiences through data analysis.</p>
 </div>
 
 <div class="container" id="education">
@@ -67,11 +59,15 @@
 </div>
 
 <div class="container" id="research">
-    <p class="text">My research concerns time-inconsistent instances of utility discounting in the context of help-seeking rates and the effects of accessible technology on intertemporal choices. I work through the NEXIS Lab at the iSchool at Syracuse.</p>
+    <p class="text">My research concerns time-inconsistent instances of utility discounting in the context of help-seeking rates and the effect of accessible technology on intertemporal choices. I work through the NEXIS Lab at the iSchool at Syracuse.</p>
 </div>
 
 <div class="container" id="experience">
-    <p class="text">I've worked and learned alongside some amazing people at Ernst & Young, Bloomberg and Alley. I'll be joining BlackRock's Portfolio Analytics Group as a Summer Analyst next year.</p>
+    <p class="text">I've worked and learned alongside some amazing people at Ernst & Young, Bloomberg and Alley and will be joining BlackRock's Portfolio Analytics Group as a Summer Analyst next year. <a href="https://www.dropbox.com/s/ecyu9k3ejt1vwb0/Esmeralda-Murray-public-resume.pdf" class="normal" target="_blank">Check out my resume.</a></p>
+</div>
+
+<div class="container" id="etc">
+    <p class="text">My favorite Spotify playlist is currently <a href="https://open.spotify.com/user/spotify/playlist/6nIJS5m3ZyG9nNghjQNAug" class="normal" target="_blank">Folk Rock Chill.</a> I'm a native New Yorker but I've never been to the top of the Empire State Building. I'm currently playing Ace Attorney: Spirit of Justice. I'm obviously not good at thinking of fun facts.</p>
 </div>
 
 <div class="container" id="contact">
@@ -104,120 +100,17 @@
     </p>
 </div>
 
-<!-- Footer -->
-
 <footer>
     <p class="footer">created + designed by esmeralda murray &#x1F192</p>
 </footer>
 
-
-<script type="text/javascript" src="assets/js/skrollr.min.js"></script>
-<script type="text/javascript">
-    var s = skrollr.init();
-</script>
-
 </body>
 
-<!-- Javascript -->
-
+<!-- JS -->
 
 <script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/modernizr.js" type="text/javascript"></script>
 <script src="assets/js/typed.js" type="text/javascript"></script>
-<script>
-
-
-
-    // Typed effect //
-
-    $(function(){
-        $(".element").typed({
-            strings: ['is an aspiring data scientist', 'is probably watching the Office right now', 'loves the Discover Weekly algorithm way too much', 'just discovered It\'s Always Sunny', 'wakes up to Tame Impala every morning'],
-            typeSpeed: 20
-        });
-    });
-
-    // Smooth scrolling //
-
-    $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-
-    // Hidden header for #start //
-    $(document).scroll(function() {
-        var y = $(this).scrollTop();
-        if (y > 600) {
-            $('header').fadeIn();
-        } else {
-            $('header').hide();
-        }
-    });
-
-    // nav effect
-
-    var sections = $('div')
-            , nav = $('nav')
-            , nav_height = nav.outerHeight();
-
-    $(window).on('scroll', function () {
-        var cur_pos = $(this).scrollTop();
-
-        sections.each(function() {
-            var top = $(this).offset().top - nav_height,
-                    bottom = top + $(this).outerHeight();
-
-            if (cur_pos >= top && cur_pos <= bottom) {
-                nav.find('a').removeClass('active');
-                sections.removeClass('active');
-
-                $(this).addClass('active');
-                nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
-            }
-        });
-    });
-
-    nav.find('a').on('click', function () {
-        var $el = $(this)
-                , id = $el.attr('href');
-
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - nav_height
-        }, 500);
-
-        return false;
-    });
-
-
-    jQuery(document).ready(function($){
-        if( $('.floating-labels').length > 0 ) floatLabels();
-
-        function floatLabels() {
-            var inputFields = $('.floating-labels .cd-label').next();
-            inputFields.each(function(){
-                var singleInput = $(this);
-                //check if user is filling one of the form fields
-                checkVal(singleInput);
-                singleInput.on('change keyup', function(){
-                    checkVal(singleInput);
-                });
-            });
-        }
-
-        function checkVal(inputField) {
-            ( inputField.val() == '' ) ? inputField.prev('.cd-label').removeClass('float') : inputField.prev('.cd-label').addClass('float');
-        }
-    });
-
-</script>
+<script src="assets/js/main.js" type="text/javascript"></script>
 
 </html>

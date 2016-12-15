@@ -21,7 +21,7 @@ body, html {
 }
 
 html {
-    background: #FCFAF7;
+    background: #F2F2F2;
 }
 
 header {
@@ -31,7 +31,7 @@ header {
     margin: 0 0 0 0;
     position: fixed;
     width: 100vw;
-    background: #FCFAF7;
+    background: #F2F2F2;
     line-height: 1em;
 }
 
@@ -39,6 +39,7 @@ nav {
     float: right;
     text-align: right;
     font-family: 'Space Mono', monospace;
+    color: inherit;
     list-style-type: none;
     display: inline;
 }
@@ -66,23 +67,15 @@ nav ul li a.active {
 h1 {
     font-family: 'Circular Std', sans-serif;
     font-size: 5vw;
-    color: #30323A;
+    color: #282342;
     font-weight: 700;
     letter-spacing: 1px;
-
-}
-
-h2 {
-    font-family: 'Space Mono', sans-serif;
-    font-size: 7vw;
-    font-weight: 700;
-    line-height: 7vw;
 }
 
 h3 {
     font-family: 'Space Mono', sans-serif;
-    color: #30323A;
-    font-weight: 100;
+    color: #282342;
+    font-weight: 300;
     font-size: 2.5vw;
 }
 
@@ -103,6 +96,16 @@ footer {
     line-height: 60px;
 }
 
+a.normal {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid #FFD76B;
+}
+
+a.normal:hover {
+    background: #FFD76B;
+}
+
 .arrow {
     bottom: 50px;
     position: absolute;
@@ -118,7 +121,7 @@ footer {
     height: 3em;
     top: 0;
     left: 0;
-    background: #FCFAF7;
+    background: #F2F2F2;
     position: relative;
     z-index: 10001;
 }
@@ -137,7 +140,7 @@ footer {
     position: static;
     letter-spacing: 1px;
     font-family: 'Circular Std', sans-serif;
-    color: #30323A;
+    color: #282342;
 }
 
 .text-contact {
@@ -149,7 +152,7 @@ footer {
     position: static;
     letter-spacing: 1px;
     font-family: 'Circular Std', sans-serif;
-    color: #30323A;
+    color: #282342;
 }
 
 .container {
@@ -423,13 +426,13 @@ footer {
     /* form element wrapper */
     position: relative;
     margin: 0;
-    background: #69C3D3;
+    background: #DDDDDD;
     border-radius: .5em;
 }
 
 .cd-form h4, .cd-form .cd-label {
     font-size: 1rem;
-    color: #B0E8F2;
+    color: #282342;
     margin-bottom: 0;
 }
 
