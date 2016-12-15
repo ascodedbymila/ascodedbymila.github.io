@@ -12,15 +12,35 @@
 
 /* Main */
 
-.bar {
-    width: 100%;
-    margin: 0;
-    height: 3em;
+body, html {
+    min-height: 100%;
+    min-width: 100%;
     top: 0;
     left: 0;
+    margin: 0;
+}
+
+html {
     background: #FCFAF7;
-    position: relative;
-    z-index: 10001;
+}
+
+header {
+    top: 0;
+    left: 0;
+    height: 3em;
+    margin: 0 0 0 0;
+    position: fixed;
+    width: 100vw;
+    background: #FCFAF7;
+    line-height: 1em;
+}
+
+nav {
+    float: right;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    list-style-type: none;
+    display: inline;
 }
 
 nav ul li {
@@ -39,40 +59,73 @@ nav ul li a {
     transition: all 0.3s ease-in-out;
 }
 
-.logo {
-    padding-top: 10px;
-    padding-left: 15px;
-}
-
-nav {
-    float: right;
-    text-align: right;
-    font-family: 'Space Mono', monospace;
-    list-style-type: none;
-    display: inline;
-}
-
-header {
-    top: 0;
-    left: 0;
-    height: 3em;
-    margin: 0 0 0 0;
-    position: fixed;
-    width: 100vw;
-    background: #FCFAF7;
-    line-height: 1em;
-}
-
 nav ul li a.active {
     border-bottom: 3px solid #99D875;
 }
 
-body, html {
-    min-height: 100%;
-    min-width: 100%;
+h1 {
+    font-family: 'Circular Std', sans-serif;
+    font-size: 5vw;
+    color: #30323A;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+h2 {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 7vw;
+    font-weight: 700;
+    line-height: 7vw;
+}
+
+h3 {
+    font-family: 'Space Mono', sans-serif;
+    color: #30323A;
+    font-weight: 100;
+    font-size: 2.5vw;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    height: 5em;
+    width: 100%;
+    position: relative;
+    background: #A277B2;
+    opacity: .8;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    color: #fff;
+    line-height: 75px;
+}
+
+.arrow {
+    bottom: 50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+}
+
+.bar {
+    width: 100%;
+    margin: 0;
+    height: 3em;
     top: 0;
     left: 0;
-    margin: 0;
+    background: #FCFAF7;
+    position: relative;
+    z-index: 10001;
+}
+
+.logo {
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
 .text {
@@ -99,34 +152,6 @@ body, html {
     color: #30323A;
 }
 
-html {
-    background: #FCFAF7;
-}
-
-footer {
-    bottom: 0;
-    left: 0;
-    height: 5em;
-    width: 100%;
-    position: relative;
-    background: #A277B2;
-    opacity: .8;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    color: #fff;
-    line-height: 75px;
-}
-
-h3 {
-    font-family: 'Space Mono', sans-serif;
-    color: #30323A;
-    font-weight: 100;
-    font-size: 2.5vw;
-}
-
 .container {
     height: 100vh;
     width: 100vw;
@@ -137,6 +162,10 @@ h3 {
     -o-background-size: cover;
 }
 
+#contact {
+    padding-bottom: 20px !important;
+}
+
 .title {
     margin: 0 auto;
     width: 80%;
@@ -144,22 +173,7 @@ h3 {
     line-height: 15px;
 }
 
-[class*='col'] {
-    float: left;
-}
-
-.col-1-4 {
-    width: 25%;
-    margin: 0 auto;
-    padding: 28vh 5% 5% 5%;
-    text-align: center;
-}
-
-.col-4-4 {
-    width: 75%;
-    margin: 0 auto;
-    padding: 28vh 5% 5% 5%;
-}
+/* Shapes */
 
 .shapes {
     margin: 0 auto;
@@ -350,36 +364,6 @@ h3 {
     }
 }
 
-
-h1 {
-    font-family: 'Circular Std', sans-serif;
-    font-size: 5vw;
-    color: #30323A;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-}
-
-h2 {
-    font-family: 'Space Mono', sans-serif;
-    font-size: 7vw;
-    font-weight: 700;
-    line-height: 7vw;
-}
-
-
-.shape {
-    padding-top: 10px;
-}
-
-
-
-
-#contact {
-    padding-bottom: 20px !important;
-}
-
-
 /* Typed.js */
 
 .typed-cursor{
@@ -388,16 +372,19 @@ h2 {
     -moz-animation: blink 2.5s infinite;
     animation: blink 2.5s infinite;
 }
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
 @-webkit-keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
 @-moz-keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
