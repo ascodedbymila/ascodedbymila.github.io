@@ -1,799 +1,85 @@
+@media screen and (max-width: 700px) {
+    .container {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 20vh;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .container {
+        width: 55%;
+        margin: 0;
+        padding-top: 15vmax;
+        padding-left: 10vw;
+    }
+}
+
 /* Fonts */
 
 @font-face {
-    font-family: 'Apercu';
-    src: url('https://ascodedbymila.github.io/assets/fonts/apercu-regular.otf');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Apercu';
-    src: url('https://ascodedbymila.github.io/assets/fonts/apercu-light.otf');
+    font-family: 'Circular Std';
+    src: url('https://ascodedbymila.github.io/assets/fonts/circularstd-book.ttf');
     font-weight: 300;
 }
 
-/* Main */
-
-body, html {
-    min-height: 100%;
-    min-width: 100%;
+body {
     top: 0;
     left: 0;
-    margin: 0;
-    font-size: 16px;
-}
-
-html {
-    background: #F2F2F2;
-}
-
-header {
-    top: 0;
-    left: 0;
-    height: 3em;
-    margin: 0 0 0 0;
-    position: fixed;
+    color: #3F3F3F;
+    margin: 0 auto;
+    height: 100vh;
     width: 100vw;
-    background: #F2F2F2;
-    line-height: 1em;
-}
-
-nav {
-    float: right;
-    text-align: right;
-    font-family: 'Space Mono', monospace;
-    color: inherit;
-    list-style-type: none;
-    display: inline;
-}
-
-nav ul li {
-    display: inline;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: lowercase;
-    padding-right: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    display: inline;
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul li a.active {
-    border-bottom: 3px solid #99D875;
-}
-
-h1 {
-    font-family: 'Space Mono', sans-serif;
-    font-size: 5vw;
-    color: #282342;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-h3 {
-    font-family: 'Space Mono', sans-serif;
-    color: #282342;
-    font-weight: 300;
-    font-size: 2.5vw;
-}
-
-footer {
-    bottom: 0;
-    left: 0;
-    height: 4em;
-    width: 100%;
-    position: relative;
-    background: #A277B2;
-    opacity: .8;
-    padding: 0;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    color: #fff;
-    line-height: 60px;
-}
-
-a.normal {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 3px solid #FFD76B;
-}
-
-a.normal:hover {
-    background: #FFD76B;
-}
-
-.arrow {
-    bottom: 50px;
-    position: absolute;
-    left: 50%;
-    margin-left: -80px;
-    -webkit-animation: arrow 3s infinite;
-    animation: arrow 3s infinite;
-    text-align: center;
-    font-family: 'Space Mono', sans-serif;
-    font-style: italic;
-    font-weight: 200;
-    color: #5A5575;
-}
-
-.bar {
-    width: 100%;
-    margin: 0;
-    height: 5em;
-    top: 0;
-    left: 0;
-    background: #F2F2F2;
-    position: relative;
-    z-index: 10001;
-}
-
-.logo {
-    padding-top: 10px;
-    padding-left: 15px;
-}
-
-.text {
-    font-size: 200%;
-    width: 60%;
-    margin: 0 auto;
-    padding-top: 30vh;
-    font-weight: 500;
-    position: static;
-    letter-spacing: 1px;
-    font-family: 'Apercu', sans-serif;
-    color: #282342;
-}
-
-.text-contact {
-    font-size: 200%;
-    width: 60%;
-    margin: 0 auto;
-    padding-top: 10vw;
-    font-weight: 500;
-    position: static;
-    letter-spacing: 1px;
-    font-family: 'Apercu', sans-serif;
-    color: #282342;
+    background: #F7F7F7;
+    border: 1vmin solid #FFD76B;
+    box-sizing: border-box;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
-    position: static;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 3vmin;
+    line-height: 5vmin;
+    display: block;
 }
 
-.title {
-    margin: 0 auto;
-    width: 80%;
-    padding-top: 30vh;
-    line-height: 15px;
+a {
+    border-bottom: 4px solid #FFD76B;
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Shapes */
-
-.shapes {
-    margin: 0 auto;
-    width: 80%;
+a:hover {
+    text-decoration: none;
+    color: inherit;
+    background: #FFD76B;
 }
 
-.small-circle {
-    animation: smallcircle 20s infinite;
-    position: fixed;
-    opacity: .5;
+.element {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 300;
+    font-size: 6vmin;
+    letter-spacing: 1px;
+    border-bottom: 6px solid #FFD76B;
 }
-
-.small-square {
-    animation: smallsquare 30s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.small-triangle {
-    animation: smalltriangle 15s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.large-square {
-    animation: largesquare 20s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.large-squiggle {
-    animation: largesquiggle 30s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.large-circle {
-    animation: largecircle 20s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.small-peak {
-    animation: smallpeak 35s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.large-line {
-    animation: largeline 20s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-.large-triangle {
-    animation: largetriangle 30s infinite;
-    position: fixed;
-    opacity: .5;
-}
-
-@keyframes arrow {
-    0% {
-        transform: translateY(0)
-    }
-    50% {
-        transform: translateY(-30px)
-    }
-    100% {
-        transform: translateY(0)
-    }
-}
-
-@keyframes smallcircle {
-    0% {
-        top: 400px;
-        left: 500px;
-    }
-    50% {
-        transform: translate(200px, 20px);
-    }
-    100% {
-        top: 400px;
-        left: 500px;
-    }
-}
-
-@keyframes smallsquare {
-    0% {
-        top: 75px;
-        left: 150px;
-    }
-    50% {
-        transform: translate(50px,150px);
-    }
-    100% {
-        top: 75px;
-        left: 150px;
-    }
-}
-
-@keyframes largetriangle {
-    0% {
-        top: 115px;
-        right: 225px;
-    }
-    50% {
-        transform: translate(150px,200px) rotate(180deg);
-    }
-    100% {
-        top: 115px;
-        right: 225px;
-    }
-}
-
-@keyframes largeline {
-    0% {
-        top: 200px;
-        right: 200px;
-    }
-    50% {
-        top: 200px;
-        right: 400px;
-    }
-    100% {
-        top: 200px;
-        right: 200px;
-    }
-}
-
-@keyframes smallpeak {
-    0% {
-        top: 300px;
-        left: 500px;
-    }
-    50% {
-        top: 500px;
-        transform: rotate(90deg);
-    }
-    100% {
-        top: 300px;
-        left: 500px;
-    }
-}
-
-@keyframes largecircle {
-    0% {
-        bottom: 100px;
-        left: 150px;
-    }
-    50% {
-        bottom: 300px;
-    }
-    100% {
-        bottom: 100px;
-        left: 150px;
-    }
-}
-
-@keyframes smalltriangle {
-    0% {
-        top: 150px;
-        left: 100px;
-    }
-    50% {
-        top: 250px;
-        transform: rotate(180deg);
-    }
-    100% {
-        top: 150px;
-        left: 100px;
-    }
-}
-
-@keyframes largesquare {
-    0% {
-        top: 100px;
-        left: 100px;
-    }
-    50% {
-        top: 100px;
-        left: 500px;
-    }
-    100% {
-        top: 100px;
-        left: 100px;
-    }
-}
-
-@keyframes largesquiggle {
-    0% {
-        bottom: 75px;
-        right: 300px;
-    }
-    50% {
-        transform: translate(-150px,-150px);
-    }
-    100% {
-        bottom: 75px;
-        right: 300px;
-    }
-}
-
-/* Typed.js */
-
 .typed-cursor{
     opacity: 1;
-    -webkit-animation: blink 2.5s infinite;
-    -moz-animation: blink 2.5s infinite;
-    animation: blink 2.5s infinite;
+    font-size: 6vmin;
+    -webkit-animation: blink 2s infinite;
+    -moz-animation: blink 2s infinite;
+    animation: blink 2s infinite;
 }
-
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-
 @-webkit-keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-
 @-moz-keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-
-/* Contact form */
-
-*, *::after, *::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.cd-form {
-    width: 50%;
-    max-width: 600px;
-    margin: 0 auto;
-    border: none;
-}
-
-.cd-form::after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.cd-form fieldset {
-    margin: 0;
-    border: none;
-}
-
-.cd-form legend {
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.cd-form div {
-    /* form element wrapper */
-    position: relative;
-    margin: 0;
-    background: #DDDDDD;
-    border-radius: .5em;
-}
-
-.cd-form h4, .cd-form .cd-label {
-    font-size: 1rem;
-    color: #282342;
-    margin-bottom: 0;
-}
-
-.cd-form .cd-label {
-    display: block;
-}
-
-.cd-form input, .cd-form textarea, .cd-form select, .cd-form label {
-    font-family: "Apercu", sans-serif;
-    font-size: 1.3rem;
-    color: #fff;
-}
-
-.cd-form input[type="text"],
-.cd-form input[type="email"],
-.cd-form textarea,
-.cd-form select,
-.cd-form legend {
-    display: block;
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-}
-
-.cd-form input[type="text"],
-.cd-form input[type="email"],
-.cd-form textarea,
-.cd-form select {
-    /* general style for input elements */
-    padding: 10px;
-    border: none;
-    border-radius: .25em;
-    height: 50px;
-}
-
-.cd-form input[type="text"]:focus,
-.cd-form input[type="email"]:focus,
-.cd-form textarea:focus,
-.cd-form select:focus {
-    outline: none;
-    border-color: #fff;
-    box-shadow: 0 0 5px rgba(44, 151, 222, 0.2);
-}
-
-.cd-form .cd-select {
-    /* select element wapper */
-    position: relative;
-}
-
-.cd-form .cd-select::after {
-    /* arrow icon for select element */
-    content: '';
-    position: absolute;
-    z-index: 1;
-    right: 16px;
-    top: 50%;
-    margin-top: -8px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background: url("../img/cd-icon-arrow.svg") no-repeat center center;
-    pointer-events: none;
-}
-
-.cd-form select {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-}
-
-.cd-form select::-ms-expand {
-    display: none;
-}
-
-.cd-form .cd-form-list {
-    margin-top: 16px;
-}
-
-.cd-form .cd-form-list::after {
-    clear: both;
-    content: "";
-    display: table;
-}
-
-.cd-form .cd-form-list li {
-    /* wrapper for radio and checkbox input types */
-    display: inline-block;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin: 0 26px 16px 0;
-    float: left;
-}
-
-.cd-form input[type=radio],
-.cd-form input[type=checkbox] {
-    /* hide original check and radio buttons */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    z-index: 2;
-}
-
-.cd-form input[type="radio"] + label,
-.cd-form input[type="checkbox"] + label {
-    padding-left: 24px;
-}
-
-.cd-form input[type="radio"] + label::before,
-.cd-form input[type="radio"] + label::after,
-.cd-form input[type="checkbox"] + label::before,
-.cd-form input[type="checkbox"] + label::after {
-    /* custom radio and check boxes */
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -8px;
-    width: 16px;
-    height: 16px;
-}
-
-.cd-form input[type="radio"] + label::before,
-.cd-form input[type="checkbox"] + label::before {
-    border: 1px solid #cfd9db;
-    background: #ffffff;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-
-.cd-form input[type="radio"] + label::before,
-.cd-form input[type="radio"] + label::after {
-    border-radius: 50%;
-}
-
-.cd-form input[type="checkbox"] + label::before,
-.cd-form input[type="checkbox"] + label::after {
-    border-radius: .25em;
-}
-
-.cd-form input[type="radio"] + label::after,
-.cd-form input[type="checkbox"] + label::after {
-    background-color: #2c97de;
-    background-position: center center;
-    background-repeat: no-repeat;
-    box-shadow: 0 0 5px rgba(44, 151, 222, 0.4);
-    display: none;
-}
-
-.cd-form input[type="radio"] + label::after {
-    /* custom image for radio button */
-    background-image: url("../img/cd-icon-radio.svg");
-}
-
-.cd-form input[type="checkbox"] + label::after {
-    /* custom image for checkbox */
-    background-image: url("../img/cd-icon-check.svg");
-}
-
-.cd-form input[type="radio"]:focus + label::before,
-.cd-form input[type="checkbox"]:focus + label::before {
-    /* add focus effect for radio and check buttons */
-    box-shadow: 0 0 5px rgba(44, 151, 222, 0.6);
-}
-
-.cd-form input[type="radio"]:checked + label::after,
-.cd-form input[type="checkbox"]:checked + label::after {
-    display: block;
-}
-
-.cd-form input[type="radio"]:checked + label::before,
-.cd-form input[type="radio"]:checked + label::after,
-.cd-form input[type="checkbox"]:checked + label::before,
-.cd-form input[type="checkbox"]:checked + label::after {
-    -webkit-animation: cd-bounce 0.3s;
-    -moz-animation: cd-bounce 0.3s;
-    animation: cd-bounce 0.3s;
-}
-
-.cd-form textarea {
-    min-height: 100px;
-    resize: vertical;
-    overflow: auto;
-}
-
-.cd-form input[type="submit"] {
-    /* button style */
-    border: none;
-    float: right;
-    background: #99D875;
-    border-radius: .25em;
-    padding: 16px 20px;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-}
-
-.no-touch .cd-form input[type="submit"]:hover {
-    background: #82CE56;
-}
-
-.cd-form input[type="submit"]:focus {
-    outline: none;
-    background: #2b3e51;
-}
-
-.cd-form input[type="submit"]:active {
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -o-transform: scale(0.9);
-    transform: scale(0.9);
-}
-
-.cd-form [required] {
-    background: url("../img/cd-required.svg") no-repeat top right;
-}
-
-.cd-form .error-message p {
-    background: #e94b35;
-    color: #ffffff;
-    font-size: 1.4rem;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-radius: .25em;
-    padding: 16px;
-}
-
-.cd-form .error {
-    border-color: #e94b35 !important;
-}
-
-@media only screen and (min-width: 600px) {
-    .cd-form div {
-        /* form element wrapper */
-        margin: 32px 0;
-    }
-    .cd-form legend + div {
-        /* reduce margin-top for first form element after the legend */
-        margin-top: 20px;
-    }
-    .cd-form h4, .cd-form .cd-label {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-    .cd-form input[type="text"],
-    .cd-form input[type="email"],
-    .cd-form textarea,
-    .cd-form select {
-        padding: 16px;
-    }
-}
-
-@-webkit-keyframes cd-bounce {
-    0%, 100% {
-        -webkit-transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(0.8);
-    }
-}
-
-@-moz-keyframes cd-bounce {
-    0%, 100% {
-        -moz-transform: scale(1);
-    }
-    50% {
-        -moz-transform: scale(0.8);
-    }
-}
-
-@keyframes cd-bounce {
-    0%, 100% {
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(0.8);
-        -moz-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        transform: scale(0.8);
-    }
-}
-
-.js .floating-labels div {
-    margin: 28px 0;
-}
-
-.js .floating-labels .cd-label {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    font-size: 1.6rem;
-    cursor: text;
-    -webkit-transition: top 0.2s, left 0.2s, font-size 0.2s;
-    -moz-transition: top 0.2s, left 0.2s, font-size 0.2s;
-    transition: top 0.2s, left 0.2s, font-size 0.2s;
-}
-
-.js .floating-labels .icon .cd-label {
-    left: 20px;
-}
-
-.js .floating-labels .cd-label.float {
-    /* move label out the input field */
-    font-size: 1rem;
-    top: -20px;
-    left: 0 !important;
-}
-
-@media only screen and (min-width: 600px) {
-    .js .floating-labels legend + div {
-        /* reduce margin-top for first form element after the legend */
-        margin-top: 16px;
-    }
-    .js .floating-labels .cd-label {
-        top: 10px;
-    }
-}
-

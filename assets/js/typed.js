@@ -252,7 +252,6 @@
 
     backspace: function(curString, curStrPos) {
 
-
       // exit when stopped
       if (this.stop === true) {
         return;
@@ -401,26 +400,26 @@
   };
 
   $.fn.typed.defaults = {
-    strings: ['a researcher.', 'a designer.', 'a budding scientist.', 'Esmeralda.'],
+    strings: [''],
     stringsElement: null,
     // typing speed
     typeSpeed: 500,
     // time before typing starts
     startDelay: 1000,
     // backspacing speed
-    backSpeed: 10,
+    backSpeed: null,
     // shuffle the strings
     shuffle: false,
     // time before backspacing
     backDelay: 1000,
     // loop
-    loop: true,
+    loop: false,
     // false = infinite
-    loopCount: false,
+    loopCount: true,
     // show cursor
     showCursor: true,
     // character for cursor
-    cursorChar: "|",
+    cursorChar: "",
     // attribute to type (null == text)
     attr: null,
     // either html or text
