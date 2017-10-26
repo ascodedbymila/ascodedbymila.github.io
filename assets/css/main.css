@@ -17,15 +17,6 @@ body {
     background-attachment: fixed;
 }
 
-footer {
-    height: 3em;
-    width: 100%;
-    margin: 0;
-    bottom: -40em;
-    position: absolute;
-    background: #F7F7FA;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -137,6 +128,9 @@ b {
         float: left;
         margin: 1em 7.5%;
     }
+    footer {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 701px) {
@@ -161,6 +155,14 @@ b {
     .right {
         margin: 0 7.5% 3em 2.5%;
     }
+    footer {
+        height: 3em;
+        width: 100%;
+        margin: 0;
+        bottom: -40em;
+        position: absolute;
+        background: #F7F7FA;
+}
 }
 
 #intro a {
