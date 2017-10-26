@@ -1469,7 +1469,7 @@
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-  animation-delay: 5s;
+  animation-delay: 7s;
 }
 
 @-webkit-keyframes fadeInUp2 {

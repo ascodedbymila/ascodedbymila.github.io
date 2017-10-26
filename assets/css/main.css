@@ -1,58 +1,189 @@
+/* general specs */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+body {
+    background: linear-gradient(-90deg, #ffffff, #F7F7FA);
+    background: -webkit-linear-gradient(-90deg, #ffffff, #F7F7FA);
+    background: -o-linear-gradient(-90deg, #ffffff, #F7F7FA);
+    background: -moz-linear-gradient(-90deg, #ffffff, #F7F7FA);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer {
+    height: 3em;
+    width: 100%;
+    margin: 0;
+    bottom: -40em;
+    position: absolute;
+    background: #F7F7FA;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1em 0 0;
+    text-align: right;
+}
+
+li {
+    display: inline;
+    line-height: 45px;
+}
+
+#coffee {
+    font-family: "Roboto Mono", monospace;
+    font-size: .75em;
+    color: #C3BFD7;
+}
+
+li a {
+    padding: 1em;
+    color: #6A5F7E;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    padding-top: 2em;
+    color: #292244;
+}
+
+#title {
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 700;
+}
+
+#intro {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+b {
+    text-decoration: none;
+    color: inherit;
+    background: #F2E5F6;
+}
+
+.grid {
+    display: flex;
+    float: left;
+    top: 12em;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: .5em;
+    overflow: hidden;
+    height: 20em;
+}
+
+.grid a {
+    opacity: 1;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+.grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    opacity: .3;
+}
+
+.grid a:hover {
+    opacity: .2;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
 @media screen and (max-width: 700px) {
+    #title {
+        font-size: 2em;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    #body {
+        font-size: .9em;
+    }
+    ul {
+        display: none;
+    }
     .container {
-        width: 60%;
         margin: 0 auto;
-        padding-top: 20vh;
+        width: 80%;
+    }
+    #intro {
+        text-align: justify;
+        font-size: .85em;
+    }
+    .grid {
+        width: 85%;
+        float: left;
+        margin: 1em 7.5%;
     }
 }
 
 @media screen and (min-width: 701px) {
+    #title {
+        font-size: 3em;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+    }
+    #body {
+        font-size: 1em;
+    }
     .container {
-        width: 55%;
-        margin: 0;
-        padding-top: 15vmax;
-        padding-left: 10vw;
+        margin: 0 0 0 10%;
+        width: 70vw;
+    }
+    .grid {
+        width: 40%;
+    }
+    .left {
+        margin: 0 2.5% 3em 7.5%;
+    }
+    .right {
+        margin: 0 7.5% 3em 2.5%;
     }
 }
 
-/* Fonts */
-
-@font-face {
-    font-family: 'Circular Std';
-    src: url('https://ascodedbymila.github.io/assets/fonts/circularstd-book.ttf');
-    font-weight: 300;
+#intro a {
+    border-bottom: 4px solid #C3BFD7;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: -20px;
 }
 
-body {
-    top: 0;
-    left: 0;
-    color: #3F3F3F;
-    margin: 0 auto;
-    height: 100vh;
-    width: 100vw;
-    background: #F7F7F7;
-    border: 1vmin solid #FFD76B;
+#intro a:hover {
+    text-decoration: none;
+    color: inherit;
+    background: #C3BFD7;
+}
+
+
+* {
     box-sizing: border-box;
 }
 
-.container {
-    font-family: 'Inconsolata', sans-serif;
-    font-size: 3vmin;
-    line-height: 5vmin;
-    display: block;
-}
 
-a {
-    border-bottom: 4px solid #FFD76B;
-    text-decoration: none;
-    color: inherit;
-}
+/*
 
-a:hover {
-    text-decoration: none;
-    color: inherit;
-    background: #FFD76B;
-}
 
 .element {
     font-family: 'Circular Std', sans-serif;
@@ -83,3 +214,5 @@ a:hover {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+*/

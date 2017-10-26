@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="assets/css/animate.css">
 <link rel="stylesheet" href="assets/css/main.css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/animate.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Encode+Sans|Inconsolata|Roboto+Mono">
+<script src="https://use.fontawesome.com/e273df97fc.js"></script>
+
+<!-- update this before committing -->
 <head>
     <meta charset="UTF-8">
     <title>Esmeralda Murray</title>
@@ -14,14 +17,38 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico?">
 </head>
 
+
 <body>
-<div class="container">
-    <span class="element"></span>
-    <br><br>
-    <div class="text animated fadeInUp">I'm an undergraduate Econometrics student interested in leveraging behavioral insights into data-driven strategies, all geared towards improving user experience. I've previously worked for Alley, EY and Bloomberg and am looking for internships in data science & design research. New website design coming soon.</div>
-    <div class="text animated fadeInUp2"><br>Find me on <a href="https://www.linkedin.com/in/esmeraldamurray">LinkedIn</a>, <a href="https://github.com/ascodedbymila">Github</a>, <a href="https://medium.com/@esmeraldamurray">Medium</a> and <a href="https://dribbble.com/esmeraldamurray">Dribbble</a>.</div>
-</div>
+    <div class="container">
+        <p id="title"><span class="element"></span></p>
+        <p id="intro" class="text animated fadeInUp">I'm a self-taught programmer operating at the intersection of social science and data science. While my site is under construction, <a href="mailto:hello@esmeraldamurray.com">let's get acquainted</a>.</p>
+    </div>
+
+    <!-- mama -->
+    <div class="grid left animated fadeInUp"><img src="assets/img/mama.jpg"/></div>
+    <!-- freelance -->
+    <div class="grid right animated fadeInUp"><img src="assets/img/freelance.jpg"/></a></div>
+    <br>
+    <!-- add.me -->
+    <div class="grid left animated fadeInUp"><img src="assets/img/addme.jpg"/></a></div>
+    <!-- design -->
+    <div class="grid right animated fadeInUp"><img src="assets/img/Checkout.jpg"/></a></div>
+
+<footer class="animated fadeInUp">
+    <nav id="links">
+        <ul>
+            <li id="coffee">made with coffee & code by esmeralda</li>
+            <li><a href="https://twitter.com/esmeraldamila_"><i class="fa fa-twitter fa-lg"></i></a></li>
+            <li><a href="https://github.com/ascodedbymila"><i class="fa fa-github fa-lg"></i></a></li>
+            <li><a href="https://dribbble.com/esmeraldamurray"><i class="fa fa-dribbble fa-lg"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/esmeraldamurray"><i class="fa fa-linkedin-square fa-lg"></i></a></li>
+        </ul>
+    </nav>
+</footer>
+
 </body>
+
+
 
 <!-- JS -->
 
@@ -31,8 +58,15 @@
 <script>
     $(function(){
         $(".element").typed({
-            strings: ['Hi!^1500 I\'m Esmeralda.'],
-            typeSpeed: 20
+            strings: ['Hi!^1000 I\'m Esmeralda &#x1F44B'],
+            typeSpeed: 75,
+            startDelay: 700,
+            backSpeed: 50,
+            backDelay: 500,
+            loop: false,
+            loopCount: false,
+            showCursor: false,
+            cursorChar: "|"
         });
     });
 </script>

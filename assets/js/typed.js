@@ -215,6 +215,8 @@
               self.backspace(curString, curStrPos);
             }, self.backDelay);
 
+            // lmao what does this else mean
+            
           } else {
 
             /* call before functions if applicable */
@@ -405,21 +407,21 @@
     // typing speed
     typeSpeed: 500,
     // time before typing starts
-    startDelay: 1000,
+    startDelay: 500,
     // backspacing speed
     backSpeed: null,
     // shuffle the strings
     shuffle: false,
     // time before backspacing
-    backDelay: 1000,
+    backDelay: 500,
     // loop
-    loop: false,
+    loop: true,
     // false = infinite
-    loopCount: true,
+    loopCount: false,
     // show cursor
     showCursor: true,
     // character for cursor
-    cursorChar: "",
+    cursorChar: "_",
     // attribute to type (null == text)
     attr: null,
     // either html or text
