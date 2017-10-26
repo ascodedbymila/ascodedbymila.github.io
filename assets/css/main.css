@@ -183,6 +183,17 @@ b {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Circular Std';
+    src: url(/assets/fonts/circularstd-book.ttf)
+}
+
+@font-face {
+    font-family: 'Circular Std';
+    src: url(/assets/fonts/circularstd-bold.ttf);
+    font-weight: bold;
+}
+
 
 /*
 
