@@ -405,7 +405,7 @@
     strings: [''],
     stringsElement: null,
     // typing speed
-    typeSpeed: 500,
+    typeSpeed: 0,
     // time before typing starts
     startDelay: 500,
     // backspacing speed
