@@ -5,15 +5,14 @@
 }
 
 @font-face {
-    font-family: 'Circular Std';
+    font-family: 'Larish Neue';
     src: url(/assets/fonts/circularstd-book.ttf);
     font-weight: 200;
 }
 
 @font-face {
-    font-family: 'Circular Std';
-    src: url(/assets/fonts/circularstd-bold.ttf);
-    font-weight: bold;
+    font-family: 'Calibre';
+    src: url(/assets/fonts/larishneue-webfont.ttf);
 }
 
 html, body {
